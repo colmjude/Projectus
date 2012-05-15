@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+	<title>Style Guide</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="_css/normalize.css" type="text/css"/>
+	<link rel="stylesheet" href="_css/styleguide.css" type="text/css"/>
+	<link rel="stylesheet" href="_css/examplestyles.css" type="text/css"/>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div id="topbar">
+		<nav>
+			<a href="#headings">Headings</a>
+			<a href="#grouping">Grouping Content</a>
+			<a href="#quotes">Quotes</a>
+			<a href="#lists">Lists</a>
+			<a href="#figures">Figures</a>
+			<a href="#textlevel">Text Level</a>
+			<a href="#tables">Tables</a>
+			<a href="#forms">Forms</a>
+		</nav>
+	</div>
+
+	<header>
+		<h1>Style Guide</h1>
+	</header>
+
+	<section id="headings">
+		<h2>Heading Levels</h2>
+		<h1>First-Level Header</h1>
+		<h2>Second-Level Header</h2>
+		<h3>Third-Level Header</h3>
+		<h4>Fourth-Level Header</h4>
+		<h5>Fifth-Level Header</h5>
+		<h6>Sixth-Level Header</h6>
+	</section>
+
+	<section id="grouping">
+		<h2>Grouping content</h2>
+		<h3>Paragraphs</h3>
+		<p>This is an example <strong>paragraph</strong> at default text size for this site. All paragraphs are denoted by <code>p</code> tags in the markup. This section is overly verbose compared with the other sections but that is because it needs to be more realistic and look like an actually paragraph of text that could be on a page on the site.</p>
+
+		<h3>Horizontal rule</h3>
+		<p>The <code>hr</code> element represents a paragraph-level thematic break, e.g. a scene change in a story, or a transition to another topic within a section of a reference book.</p>
+		<hr/>
+
+		<h3>Pre-formatted text</h3>
+		<p>The <code>pre</code> element represents a block of pre-formatted text. Here&#8217;s an example showing the printable characters of <abbr title="American Standard Code for Information Interchange">ASCII</abbr>:</p>
+	<pre><samp>  ! " # $ % &amp; ' ( ) * + , - . /
+	    0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+	    @ A B C D E F G H I J K L M N O
+	    P Q R S T U V W X Y Z [ \ ] ^ _
+	    ` a b c d e f g h i j k l m n o
+	    p q r s t u v w x y z { | } ~ </samp></pre>
+	</section>
+
+	<section id="quotes">
+		<h2>Quotes and Citations</h2>
+		<h3>Blockquotes</h3>
+		<blockquote cite="https://github.com/paulrobertlloyd/barebones/blob/master/_styleguide.php#L50">
+			<p>The <code>blockquote</code> element represents a section that is being quoted from another source.</p>
+		</blockquote>
+		<p>Paul Robert Lloyd, in his <cite><a href="https://github.com/paulrobertlloyd/barebones">barebones project</a></cite>. 9th May 2012</p>
+		<p>Additionally, you might wish to cite the source, as in the above example. The correct method involves including the <code>cite</code> attribute on the <code>blockquote</code> element, but since no browser makes any use of that information, it&#8217;s useful to link to the source also.</p>
+
+		<h3>Citations</h3>
+		<p>The <code>cite</code> element is used to represent the title of a work (e.g. a book, essay, poem, song, film, TV show, sculpture, painting, musical, exhibition, etc). This can be a work that is being quoted or referenced in detail (i.e. a citation), or it can just be a work that is mentioned in passing. Example:</p>
+		<p><cite>Universal Declaration of Human Rights</cite>, United Nations, December 1948. Adopted by General Assembly resolution 217 A (III).</p>
+
+		<h3>Inline quotes</h3>
+		<p>The <code>q</code> element is used for quoting text inline. Can be nested.</p>
+		<p>I once said, <q>Your site is only as good as the experience one has with it</q>. I still believe that.</p>
+	</section>
+
+	<section id="lists">
+		<h2>Lists</h2>
+		<h3>Ordered list</h3>
+		<p>The <code>ol</code> element denotes an ordered list &mdash; numbers (or letters/numerals) not bullets. Individual list items require surrounding <code>&lt;li&gt;</code> tags.</p>
+		<ol>
+			<li>This is an ordered list.</li>
+			<li>
+				This is the second item, avec sub list
+				<ol>
+					<li>This is the sub list &mdash; also ordered.</li>
+					<li>It has two items.</li>
+				</ol>
+			</li>
+			<li>This is the final item.</li>
+		</ol>
+
+		<h3>Unordered list</h3>
+		<p>The <code>ul</code> element is used for an unordered list &mdash; bulleted list not numbered. Same as ordered lists individual items are wrapped with <code>&lt;li&gt;</code> tags.</p>
+		<ul>
+			<li>
+				United Kingdom of Great Britain and Northern Ireland:
+				<ul>
+					<li>England</li>
+					<li>Scotland</li>
+					<li>Wales</li>
+					<li>Northern Ireland</li>
+				</ul>
+			</li>
+			<li>Republic of Ireland</li>
+			<li>Isle of Man</li>
+			<li>
+				Channel Islands:
+				<ul>
+					<li>Bailiwick of Guernsey</li>
+					<li><p>Block level elements, such as paragraphs can be contained in list items.</p></li>
+				</ul>
+			</li>
+		</ul>
+
+		<h3>Definition list</h3>
+		<dl>
+			<dt>dl</dt>
+			<dd>The <code>dl</code> element is for another type of list called a definition list. The content of a <code>dl</code> consists of <code>dt</code> and <code>dd</code> pairs.</dd>
+			<dt>dt</dt>
+			<dd>Definition Term (<code>dt</code>), what is to be defined. Or the parent element.</dd>
+			<dt>dd</dt>
+			<dd>Definition description (<code>dd</code>), description of what is in the dt.</dd>
+			<dt>Some dt</dt>
+			<dt>Another dt</dt>
+			<dd><code>dt</code> terms may stand on their own without an accompanying <code>dd</code>, but in that case they <em>share</em> descriptions with the next available <code>dt</code>. You may not have a <code>dd</code> without a parent <code>dt</code>.</dd>
+		</dl>
+	</section>
+
+	<section id="figures">
+	<h2>Figures and Images</h2>
+		<h3>Figures (HTML5 element)</h3>
+		<!-- Should replace this in a real project with a real image -->
+		<figure>
+			<img src="http://lorempixum.com/680/400/abstract/?r" alt="Example image"/>
+			<figcaption>
+				<p>This is the caption, marked up using <code>figcaption</code> element, for the <code>figure</code> element.</p>
+			</figcaption>
+		</figure>
+
+		<p>Here, a part of a poem is marked up using figure:</p>
+		<figure>
+			<p>&#8216;Twas brillig, and the slithy toves<br/>
+			Did gyre and gimble in the wabe;<br/>
+			All mimsy were the borogoves,<br/>
+			And the mome raths outgrabe.</p>
+			<figcaption>
+				<p><cite>Jabberwocky</cite> (first verse). Lewis Carroll, 1832-98</p>
+			</figcaption>
+		</figure>
+	</section>
+
+	<section id="textlevel">
+		<h2 id="text">Text-level Semantics</h2>
+		<p>There are a number of inline <abbr title="HyperText Markup Language">HTML</abbr> elements you may use anywhere within other elements.</p>
+
+		<h3>Links and anchors</h3>
+		<p>This is <a href="http://colmjude.com/blog">a link to my blog</a> and this is <a href="#banner">a link to the top of the page</a>. Both are marked up using an <code>a</code> element.</p>
+
+		<h3>Stressed emphasis</h3>
+		<p>Using the <code>i</code> tag indicates that the user should read the text <i>in an alternate voice or mood.</i> It doesn’t imply any importance or emphasis.</p>
+		<p>For <em>additional emphasis</em> use the <code>em</code> tag.</p>
+
+		<h3>Strong importance</h3>
+		<p>Use the <code>b</code> tag for text that is intended <b>to be stylistically offset from the normal prose without conveying any extra importance.</b></p>
+		<p>If the text has <strong>extra</strong> importance then use the <code>strong</code> tag.</p>
+
+		<h3>Small print</h3>
+		<p><small>This is the small print</small>, it is marked up using a <code>small</code> tag and is used for legalese, or terms and conditions.</p>
+
+		<h3>Definition</h3>
+		<p>The <dfn title="HTML's definition tag"><code>dfn</code></dfn> element is used to highlight the first use of a term. The <code>title</code> attribute is used to describe the term.</p>
+
+		<h3>Abbreviation</h3>
+		<p>The <code>abbr</code> element is used for any abbreviations and acronyms, e.g. <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+
+		<h3>Time</h3>
+		<p>I lasted edited this section on <time datetime="2012-05-10">Thursday 10th May</time> using the <code>time</code> element to remember that fact.</p>
+
+		<h3>Code</h3>
+		<p>The <code>code</code> element is used to represent fragments of computer code.</p>
+	<pre><code>To maintain code format
+	use in conjunction with the
+	&lt;pre&gt; element
+	</code></pre>
+
+		<h3>Variable</h3>
+		<p>The <code>var</code> element is used for mathematical expressions or placeholder text. 2<var>X</var> = 8.</p>
+
+		<h3>Sample output</h3>
+		<p>Use the <code>samp</code> element to represent (sample) output from a program or computing system.</p>
+		<p>E.g. <samp>Status: 200 OK</samp></p>
+
+		<h3>Keyboard entry</h3>
+		<p>The <code>kbd</code> element is used to denote user input.<p>
+		<p>E.g Konami Code <kbd>↑</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>←</kbd><kbd>→</kbd><kbd>→</kbd><kbd>B</kbd><kbd>A</kbd></p>
+
+
+		<h3>Superscript and subscript text</h3>
+		<p>Use <code>sup</code> for superscript text such as 1<sup>st</sup> and use <code>sub</code> for subscript text such as <var>x<sub>10</sub></var>.</p>
+
+		<h3>Marked or highlighted text</h3>
+		<p>The <code>mark</code> element doesn’t attach any importance to the content within it, other than to show that it’s <mark>currently of interest</mark>.</p>
+
+		<h3>Highlighted Text</h3>
+		<p>Highlight this text to see how the highlighting is styled for this site.</p>
+
+		<h3 id="edits">Edits</h3>
+		<p>Use <code>del</code> elements for things you remove by need to remain for some reason. <del datetime="2012-05-09">I am wrong.</del></p>
+		<p>Use <code>ins</code> elements for things you add/insert into the text. <ins datetime="2012-05-10">I am right.</ins></p>
+	</section>
+
+	<section id="tables">
+		<h2>Tabular data</h2>
+		<p>Tables consist of <code>table</code>, <code>thead</code>, <code>tfoot</code>, <code>tbody</code> and <code>caption</code> tags. Plus numerous <code>tr</code> and <code>td</code> elements</p>
+		<table>
+			<caption>Yummy Mojito</caption>
+			<colgroup>
+				<col style="width:50%" />
+				<col style="width:25%" />
+				<col style="width:25%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">Ingredients</th>
+					<th scope="col">Serves 1</th>
+					<th scope="col">Serves 2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Limes, cut into wedges</td>
+					<td>1½</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>Fresh mint leaves</td>
+					<td>20</td>
+					<td>40</td>
+				</tr>
+				<tr>
+					<td>Tsp granulated sugar</td>
+					<td>2½</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Ice</td>
+					<td>Handful</td>
+					<td>More</td>
+				</tr>
+				<tr>
+					<td>White rum</td>
+					<td>65ml</td>
+					<td>130ml</td>
+				</tr>
+				<tr>
+					<td>Soda Water</td>
+					<td>Splash</td>
+					<td>2 Splashes</td>
+				</tr>
+				<tr>
+					<td>Mint Sprig to Garnish</td>
+					<td>1</td>
+					<td>2</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section id="forms">
+		<h2 id="forms">Forms</h2>
+		<p>Forms can be used when you wish to collect data from users. The <code>fieldset</code> element enables you to group related fields within a form, and each one should contain a corresponding <code>legend</code>. The <code>label</code> element ensures field descriptions are associated with their corresponding form widgets.</p>
+		<form action="#">
+			<fieldset>
+				<legend>Legend</legend>
+				<div>
+					<label for="default">Text Input <abbr title="Required">*</abbr></label>
+					<input id="default" class="text" type="text"/>
+					<em>Note about this field</em>
+				</div>
+				<div>
+					<label for="password">Password</label>
+					<input id="password" class="text" type="password"/>
+					<em>Note about this field</em>
+				</div>
+				<div>
+					<label for="url">Web Address</label>
+					<input id="url" class="text" type="url"/>
+					<em>Note about this field</em>
+				</div>
+				<div>
+					<label for="emailaddr">Email Address</label>
+					<input id="emailaddr" class="text" type="email"/>
+					<em>Note about this field</em>
+				</div>
+				<div>
+					<label for="textarea">Textarea</label>
+					<textarea id="textarea" class="text" rows="8" cols="48"></textarea>
+					<em class="clear">Note about this field</em>
+				</div>
+				<div>
+					<label for="checkbox">Single Checkbox</label>
+					<label for="checkbox" class="check"><input id="checkbox" type="checkbox" class="checkbox"/> Label</label>
+				</div>
+				<div>
+					<label for="select">Select</label>
+					<select id="select">
+						<optgroup label="Option Group">
+							<option>Option One</option>
+							<option>Option Two</option>
+							<option>Option Three</option>
+						</optgroup>
+					</select>
+					<em>Note about this selection</em>
+				</div>
+				<fieldset class="options">
+					<legend>Checkbox <abbr title="Required">*</abbr></legend>
+					<ul>
+						<li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked" /> Choice A</label></li>
+						<li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox" /> Choice B</label></li>
+						<li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox" /> Choice C</label></li>
+					</ul>
+				</fieldset>
+				<fieldset class="options">
+					<legend>Radio</legend>
+					<ul>
+						<li><label for="radio1"><input id="radio1" name="radio" type="radio" class="radio" checked="checked" /> Option 1</label></li>
+						<li><label for="radio2"><input id="radio2" name="radio" type="radio" class="radio" /> Option 2</label></li>
+					</ul>
+				</fieldset>
+				<div class="submit">
+					<input type="submit" value="Post Comment" />
+					<button>Preview</button>
+					<a href="#">Cancel</a>
+				</div>
+			</fieldset>
+		</form>
+	</section>
+
+	<footer role="contentinfo">
+		<nav role="navigation">
+			<ul>
+				<li><a href="_nakedstyleguide.html">Style Guide</a></li>
+				<!--<li><a href="_patterns.html">Pattern Primer</a></li>-->
+				<li><a href="readme.md">Read Me</a></li>
+			</ul>
+		</nav>
+		<p><small>Created in 2012 by <a href="http://colmjude.com">Colm Britton</a>. Hugely inspired by Paul Robert Lloyd's <a href="https://github.com/paulrobertlloyd/barebones">barebones project</a>.</small></p>
+	</footer><!--/.contentinfo-->
+</body>
+</html>

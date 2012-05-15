@@ -1,0 +1,156 @@
+/*
+================================================
+Created by Colm Britton
+Last updated on 15.05.2012
+================================================
+This stylesheet contains CSS for components of
+the styleguide that aren't part of the list of
+HTML elements. E.g. the header, the footer, 
+navigation and section headings.
+================================================
+*/
+body {
+	background-color:#fff;
+	margin:1em auto;
+	width:90%;
+}
+
+#topbar {
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+	left: 0;
+	position: fixed;
+	right: 0; top: 0;
+	z-index: 1000;
+	background: #fff;
+}
+
+#topbar nav {
+	width: 90%;
+	height: 2.5em;
+	line-height: 2.5em;
+	margin: 0 auto;
+}
+
+@media screen and (min-width:36em) {
+	body,
+	#topbar nav {
+		width:80%;
+	}
+}
+
+#topbar nav a {
+	margin-right: 1em;
+}
+
+header {
+	margin-top: 3em;
+}
+
+header h1 {
+	line-height: 2em;
+	margin: 0;
+}
+
+section {
+	padding-bottom: 0.5em;
+}
+
+section h2:first-child,
+legend {
+	color: #222;
+	font: 500 1.5em/1 sans-serif;
+}
+
+section h2:first-child {
+	border-bottom: 1px solid #E0E0E0;
+	border-top: 1px solid #E0E0E0;
+	margin: 0.5em 0 0.6667em;
+	padding: 0.625em 0 0.5em;
+	color: #555;
+	letter-spacing: 0.1em;
+}
+
+nav ul {
+	padding: 0;
+}
+
+/* Footer
+============================================================ */
+footer[role="contentinfo"] {
+	margin-top: 4em; /* 64px */
+	padding-top: 0.4375em; /* 7px */
+	border-top: 1px solid #f0f0f0;
+	clear: both;
+}
+footer[role="contentinfo"] nav ul li {
+	display: inline;
+	margin: 0 0.75em 0 0; /* 0 12px 0 0 */
+	padding: 0 0.75em 0 0; /* 0 12px 0 0 */
+	font-weight: 600;
+	border-right: 1px solid #ccc;
+}
+footer[role="contentinfo"] nav ul li:last-child {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+footer[role="contentinfo"] a {
+	border: 0 none;
+}
+
+@media print {
+	@page {
+		margin:0.5cm;
+	}
+	
+	* {
+		background:transparent !important;
+		color:#222 !important;
+		text-shadow:none !important;
+		-webkit-box-shadow:none;
+		-moz-box-shadow:none;
+		box-shadow:none;
+	}
+
+	p, h1, h2, h3 {
+		orphans:3;
+		widows:3;
+	}
+
+	h1, h2, h3, h4 {
+		page-break-after:avoid;
+	}
+
+	blockquote {
+		border-left:4px solid #ccc;
+		padding:0 1em;
+		page-break-inside:avoid;
+	}
+
+	a, a:visited,
+	.entry a, .entry a:visited {
+		color:#222 !important;
+		border-bottom:1px dotted #999;
+		padding-left:0 !important;
+	}
+
+	thead {
+		display:table-header-group;
+	}
+
+	tr, img {
+		page-break-inside:avoid;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	textarea {
+		border-bottom:1px solid #999;
+		-webkit-box-shadow:none;
+		-moz-box-shadow:none;
+		box-shadow:none;
+	}
+}

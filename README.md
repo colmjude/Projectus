@@ -6,6 +6,25 @@ Initial project setup. Includes basic directory structure and a naked style guid
 Reading this article (http://24ways.org/2011/front-end-style-guides) by Anna Debenham inspired me to think about putting one of these together.
 Seeing and using Paul Robert Lloyd's Barebones project (https://github.com/paulrobertlloyd/barebones) encouraged me to finally put it together.
 
+## Usage
+
+### How to use the pattern primer
+
+Requires node.js version 0.5.0+
+You'll also need to install the connect node.js package. Do so by running: 
+npm install connect
+Add your project's CSS files to the head of the source.html file.
+Place all your HTML extracts into the `<root>/_patterns` folder. Navigate to the root directory of Pattern-Primer-on-Node and run: 
+	
+    node pattern-primer.js
+	
+You can then navigate to http://localhost:8080/ to see the output.
+
+Alternatively, if you want to generate a 'standalone' version of the primer output, then you can also run the program with the `tofile` arg as follows:
+
+    node pattern-primer.js --tofile
+
+
 ## TODO
 * ~~change to work with normalize.css as its base CSS~~
 * strip more of the element usage content, that can be added on a per project basis

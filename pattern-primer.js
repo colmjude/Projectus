@@ -42,13 +42,27 @@ var settings = {
 						content += '</div></div>';
 					}
 
-					content += '</body></html>';
+					// search for existents of scripts.html file
+					fs.readFile('scripts.html', function (err, data) {
+						if (err !== null && err.code === 'ENOENT') {
+							util.puts("Warning: no scripts.html file found");
+						} else {
+							util.puts("append scripts from scripts.html");
+							content += data;
+						}
+						finishPatternsFile();
+					});
 
-					if (tofile) {
-						tofileCallback(content);
-					} else {
-						serverResponse.end(content);
-					}
+					var finishPatternsFile = function() {
+						content += '</body></html>';
+						
+						if (tofile) {
+							tofileCallback(content);
+						} else {
+							serverResponse.end(content);
+						}
+					};
+
 				});
 			},
 			handleFiles = function (files) {

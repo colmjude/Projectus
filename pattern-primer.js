@@ -6,7 +6,8 @@ var settings = {
 		wwwroot: 'public',
 		pattern_path: '_patterns',
 		sourcehtmlfile: 'source.html',
-		tofile_outputpath: 'docs'
+		tofile_outputpath: 'docs',
+		scriptsfile: 'scripts.html'
 	},
 	util = require('util'),
 	connect = require('connect'),
@@ -43,7 +44,7 @@ var settings = {
 					}
 
 					// search for existents of scripts.html file
-					fs.readFile('scripts.html', function (err, data) {
+					fs.readFile(settings.pattern_path, function (err, data) {
 						if (err !== null && err.code === 'ENOENT') {
 							util.puts("Warning: no scripts.html file found");
 						} else {
